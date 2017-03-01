@@ -243,11 +243,14 @@ public class ResponseController {
 		int[] index = new int[s1.length()];
 		int i;
 		for (i = 0; i < s1.length() && i < s2.length(); ++i) {
+			System.out.println(s1.charAt(i)+" " + s2.charAt(i));
+			
 			if (s1.charAt(i) != s2.charAt(i)) {
 				index[i] = i;
 			} else {
 				index[i] = 0;
 			}
+			System.out.print(index[i]+" ");
 		}
 		return index;
 	}
